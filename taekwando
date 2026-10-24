@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art & Science of Taekwondo</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter and Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        tkd: {
+                            red: '#DC2626',
+                            blue: '#2563EB',
+                            dark: '#0F172A',
+                            gold: '#D97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #2563EB 0%, #DC2626 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-pattern {
+            background-color: #0f172a;
+            background-image: radial-gradient(#2563eb 0.75px, transparent 0.75px), radial-gradient(#dc2626 0.75px, #0f172a 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            background-opacity: 0.15;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-red-500 selection:text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full bg-slate-900/90 backdrop-blur-md z-50 border-b border-slate-800">
+        <div class="max-w-7xl mx-mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-blue-600 to-red-600 flex items-center justify-center font-heading font-black text-white text-xl shadow-lg">
+                        TKD
+                    </div>
+                    <span class="font-heading font-bold text-lg sm:text-xl tracking-tight">TAEKWONDO <span class="text-red-500">MASTERY</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+                    <a href="#about" class="hover:text-red-400 transition-colors">Why TKD</a>
+                    <a href="#benefits" class="hover:text-red-400 transition-colors">Importance</a>
+                    <a href="#levels" class="hover:text-red-400 transition-colors">Belts & Levels</a>
+                    <a href="#goals" class="hover:text-red-400 transition-colors">Competition Aim</a>
+                    <a href="#stretches" class="hover:text-red-400 transition-colors">Stretches</a>
+                    <a href="#recovery" class="hover:text-red-400 transition-colors">Recovery</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white p-2 rounded-lg">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-4 space-y-2">
+            <a href="#about" class="block py-2 text-slate-300 hover:text-red-400">Why TKD</a>
+            <a href="#benefits" class="block py-2 text-slate-300 hover:text-red-400">Importance</a>
+            <a href="#levels" class="block py-2 text-slate-300 hover:text-red-400">Belts & Levels</a>
+            <a href="#goals" class="block py-2 text-slate-300 hover:text-red-400">Competition Aim</a>
+            <a href="#stretches" class="block py-2 text-slate-300 hover:text-red-400">Stretches</a>
+            <a href="#recovery" class="block py-2 text-slate-300 hover:text-red-400">Recovery</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 hero-pattern overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/80 border border-slate-700 mb-6 backdrop-blur-sm">
+                    <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
+                    <span class="text-xs sm:text-sm font-semibold tracking-wide uppercase text-slate-300">A 7-Year Journey • Age 9 to 16</span>
+                </div>
+                <h1 class="font-heading text-4xl sm:text-6xl font-black tracking-tight mb-6 leading-tight">
+                    DISCIPLINE, POWER & <span class="gradient-text">PERSEVERANCE</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-400 mb-8 leading-relaxed">
+                    Welcome to the ultimate guide for martial artists! Having trained in Taekwondo since I was 9 years old, this platform shares essential wisdom on belt progression, competition mindsets, warm-up routines, and optimal recovery.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#levels" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 font-bold shadow-lg shadow-blue-600/30 transition-all flex items-center gap-2">
+                        Explore Belt Levels <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                    <a href="#stretches" class="px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 font-bold border border-slate-700 transition-all flex items-center gap-2">
+                        View Warm-ups & Stretches <i class="fa-solid fa-person-running text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Milestone Badge -->
+    <section class="bg-gradient-to-r from-blue-900/30 via-slate-800 to-red-900/30 border-y border-slate-800 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-red-500/20 text-red-500 flex items-center justify-center text-2xl font-bold">
+                    7+
+                </div>
+                <div>
+                    <h3 class="font-heading font-bold text-white text-lg">Years of Experience</h3>
+                    <p class="text-sm text-slate-400">Practicing continuously since 2017 (Age 9 to 16)</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap gap-6 text-sm text-slate-300 font-medium">
+                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i> Courtesy (Ye-Ui)</div>
+                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i> Integrity (Yom-Chi)</div>
+                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i> Perseverance (In-Nae)</div>
+                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i> Indomitable Spirit</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Taekwondo is Open to All Ages -->
+    <section id="about" class="py-20 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">Inclusive Martial Art</h2>
+                <h3 class="font-heading text-3xl sm:text-4xl font-extrabold">Why Taekwondo is Open to All Ages</h3>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-red-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Children -->
+                <div class="bg-slate-800/60 p-6 rounded-2xl border border-slate-700/60 hover:border-blue-500/50 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-child"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-xl mb-3">Children (Ages 5-11)</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Builds essential motor skills, coordination, self-confidence, and fundamental discipline early in life. (Like when I started at 9!)
+                    </p>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded bg-blue-500/20 text-blue-300">Focus: Focus & Motor Skills</span>
+                </div>
+
+                <!-- Teens -->
+                <div class="bg-slate-800/60 p-6 rounded-2xl border border-slate-700/60 hover:border-red-500/50 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-user-ninja"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-xl mb-3">Teens (Ages 12-17)</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Channel youthful energy into physical fitness, stress relief from school, self-defense, and competitive fighting spirit.
+                    </p>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded bg-red-500/20 text-red-300">Focus: Athletic Growth & Agility</span>
+                </div>
+
+                <!-- Adults -->
+                <div class="bg-slate-800/60 p-6 rounded-2xl border border-slate-700/60 hover:border-yellow-500/50 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-yellow-500/10 text-yellow-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-xl mb-3">Adults (Ages 18-49)</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Serves as a powerful full-body workout, dynamic stress reliever, dynamic self-defense training, and mental reset after work.
+                    </p>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded bg-yellow-500/20 text-yellow-300">Focus: Conditioning & Stress Relief</span>
+                </div>
+
+                <!-- Seniors -->
+                <div class="bg-slate-800/60 p-6 rounded-2xl border border-slate-700/60 hover:border-green-500/50 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-green-500/10 text-green-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-xl mb-3">Seniors (Ages 50+)</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Promotes joint flexibility, balance maintenance, cardiovascular health, and lifelong active longevity with low-impact forms.
+                    </p>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded bg-green-500/20 text-green-300">Focus: Mobility & Longevity</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Importance of Training Taekwondo -->
+    <section id="benefits" class="py-20 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-red-500 mb-2">Core Pillars</h2>
+                <h3 class="font-heading text-3xl sm:text-4xl font-extrabold">The Importance of Training Taekwondo</h3>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-red-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl relative overflow-hidden group hover:border-slate-700 transition-all">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-600/5 rounded-full blur-2xl group-hover:bg-blue-600/10 transition-all"></div>
+                    <i class="fa-solid fa-dumbbell text-3xl text-blue-500 mb-6"></i>
+                    <h4 class="font-heading font-bold text-xl mb-3">1. Physical Mastery & Fitness</h4>
+                    <ul class="text-slate-400 text-sm space-y-2.5">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-blue-500 text-xs"></i> Explosive kicking power & core strength</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-blue-500 text-xs"></i> Enhanced flexibility & joint mobility</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-blue-500 text-xs"></i> Rapid reflexes and spatial awareness</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl relative overflow-hidden group hover:border-slate-700 transition-all">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-red-600/5 rounded-full blur-2xl group-hover:bg-red-600/10 transition-all"></div>
+                    <i class="fa-solid fa-brain text-3xl text-red-500 mb-6"></i>
+                    <h4 class="font-heading font-bold text-xl mb-3">2. Mental Toughness & Discipline</h4>
+                    <ul class="text-slate-400 text-sm space-y-2.5">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-red-500 text-xs"></i> Laser focus under pressure</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-red-500 text-xs"></i> Emotional self-control and restraint</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-red-500 text-xs"></i> Resilience to overcome losses and challenges</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl relative overflow-hidden group hover:border-slate-700 transition-all">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-amber-600/5 rounded-full blur-2xl group-hover:bg-amber-600/10 transition-all"></div>
+                    <i class="fa-solid fa-shield-halved text-3xl text-amber-500 mb-6"></i>
+                    <h4 class="font-heading font-bold text-xl mb-3">3. Self-Defense & Confidence</h4>
+                    <ul class="text-slate-400 text-sm space-y-2.5">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-500 text-xs"></i> Practical striking and distance management</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-500 text-xs"></i> Heightened situational awareness</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-500 text-xs"></i> Unshakable self-confidence in daily life</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Taekwondo Belt Hierarchy & Levels -->
+    <section id="levels" class="py-20 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">Progression Path</h2>
+                <h3 class="font-heading text-3xl sm:text-4xl font-extrabold">Taekwondo Belt Levels & Meaning</h3>
+                <p class="text-slate-400 text-sm mt-2">Click on any belt level to examine its symbolism and requirements.</p>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-red-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Interactive Belt Selector -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-8" id="belt-tabs">
+                <!-- Tabs generated dynamically or styled in HTML -->
+                <button onclick="selectBelt(0)" class="belt-btn active border-2 border-slate-200 bg-slate-800 p-3 rounded-xl text-center hover:scale-105 transition-all">
+                    <div class="w-full h-4 bg-white rounded mb-2 shadow"></div>
+                    <span class="text-xs font-bold text-slate-200">10th-9th Geup</span>
+                    <p class="text-[10px] text-slate-400 font-semibold">White Belt</p>
+                </button>
+
+                <button onclick="selectBelt(1)" class="belt-btn border-2 border-transparent bg-slate-800 p-3 rounded-xl text-center hover:scale-105 transition-all">
+                    <div class="w-full h-4 bg-yellow-400 rounded mb-2 shadow"></div>
+                    <span class="text-xs font-bold text-slate-200">8th-7th Geup</span>
+                    <p class="text-[10px] text-slate-400 font-semibold">Yellow Belt</p>
+                </button>
+
+                <button onclick="selectBelt(2)" class="belt-btn border-2 border-transparent bg-slate-800 p-3 rounded-xl text-center hover:scale-105 transition-all">
+                    <div class="w-full h-4 bg-green-500 rounded mb-2 shadow"></div>
+                    <span class="text-xs font-bold text-slate-200">6th-5th Geup</span>
+                    <p class="text-[10px] text-slate-400 font-semibold">Green Belt</p>
+                </button>
+
+                <button onclick="selectBelt(3)" class="belt-btn border-2 border-transparent bg-slate-800 p-3 rounded-xl text-center hover:scale-105 transition-all">
+                    <div class="w-full h-4 bg-blue-500 rounded mb-2 shadow"></div>
+                    <span class="text-xs font-bold text-slate-200">4th-3rd Geup</span>
+                    <p class="text-[10px] text-slate-400 font-semibold">Blue Belt</p>
+                </button>
+
+                <button onclick="selectBelt(4)" class="belt-btn border-2 border-transparent bg-slate-800 p-3 rounded-xl text-center hover:scale-105 transition-all">
+                    <div class="w-full h-4 bg-red-600 rounded mb-2 shadow"></div>
+                    <span class="text-xs font-bold text-slate-200">2nd-1st Geup</span>
+                    <p class="text-[10px] text-slate-400 font-semibold">Red Belt</p>
+                </button>
+
+                <button onclick="selectBelt(5)" class="belt-btn border-2 border-transparent bg-slate-800 p-3 rounded-xl text-center hover:scale-105 transition-all">
+                    <div class="w-full h-4 bg-slate-950 border border-slate-700 rounded mb-2 shadow"></div>
+                    <span class="text-xs font-bold text-slate-200">1st Dan & Above</span>
+                    <p class="text-[10px] text-slate-400 font-semibold">Black Belt</p>
+                </button>
+            </div>
+
+            <!-- Belt Details Display Card -->
+            <div id="belt-details-card" class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 sm:p-8 backdrop-blur-sm transition-all">
+                <!-- Content inserted dynamically via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Setting Goals for Competition -->
+    <section id="goals" class="py-20 bg-slate-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-red-500 mb-2">Tournament Mindset</h2>
+                <h3 class="font-heading text-3xl sm:text-4xl font-extrabold">Setting Aims for Competition</h3>
+                <p class="text-slate-400 text-sm mt-2">A structured mindset framework for Sparring (Kyorugi) or Forms (Poomsae).</p>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-red-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Aim Principles -->
+                <div class="space-y-6">
+                    <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl flex gap-4 items-start">
+                        <div class="w-12 h-12 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-bold text-lg mb-1">Process Over Winning</h4>
+                            <p class="text-slate-400 text-sm">Focus on executing specific combinations, maintaining guard, and distance control rather than solely fixating on the scoreboard.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl flex gap-4 items-start">
+                        <div class="w-12 h-12 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-shield"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-bold text-lg mb-1">Emotional Control & Calmness</h4>
+                            <p class="text-slate-400 text-sm">Competitions generate adrenaline. Aim to stay composed, listen clearly to your coach's corner calls, and adapt tactics on the fly.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl flex gap-4 items-start">
+                        <div class="w-12 h-12 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-bold text-lg mb-1">Continuous Post-Match Evaluation</h4>
+                            <p class="text-slate-400 text-sm">Treat win or loss as data. Record your fight videos to analyze distance management, kicking speed, and defensive gaps.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Aim Builder Tool -->
+                <div class="bg-slate-900/90 border border-slate-800 p-6 sm:p-8 rounded-2xl shadow-xl">
+                    <h4 class="font-heading font-bold text-xl mb-4 text-white flex items-center gap-2">
+                        <i class="fa-solid fa-sliders text-red-500"></i> Competition Goal Planner
+                    </h4>
+                    <p class="text-slate-400 text-xs mb-6">Select your event type to generate an actionable pre-match objective list.</p>
+
+                    <form id="goal-planner" onsubmit="generateGoals(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Event Discipline</label>
+                            <select id="event-type" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-200 focus:outline-none focus:border-red-500">
+                                <option value="kyorugi">Sparring (Kyorugi)</option>
+                                <option value="poomsae">Poomsae (Forms)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Primary Focus Area</label>
+                            <select id="focus-area" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-200 focus:outline-none focus:border-red-500">
+                                <option value="attack">Offensive Speed & Timing</option>
+                                <option value="defense">Counter-Attacking & Footwork</option>
+                                <option value="stamina">Endurance & Match Pace</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="w-full py-3 bg-red-600 hover:bg-red-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-red-600/30">
+                            Generate Fight Objectives
+                        </button>
+                    </form>
+
+                    <div id="goal-result" class="mt-6 p-4 bg-slate-800/80 rounded-xl border border-slate-700 text-sm text-slate-300 hidden">
+                        <!-- Output dynamic aim -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Warm-Ups & Stretches -->
+    <section id="stretches" class="py-20 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">Flexibility & Safety</h2>
+                <h3 class="font-heading text-3xl sm:text-4xl font-extrabold">Essential Warm-Ups & Stretches</h3>
+                <p class="text-slate-400 text-sm mt-2">Dynamic warm-ups before training prevent injury; static stretches after increase range of motion.</p>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-red-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Stretches Tabs -->
+            <div class="flex justify-center gap-4 mb-10">
+                <button id="btn-dynamic" onclick="switchStretchMode('dynamic')" class="px-6 py-2.5 rounded-full font-bold text-sm bg-blue-600 text-white shadow-lg transition-all">
+                    Pre-Training (Dynamic)
+                </button>
+                <button id="btn-static" onclick="switchStretchMode('static')" class="px-6 py-2.5 rounded-full font-bold text-sm bg-slate-800 text-slate-400 hover:bg-slate-700 transition-all">
+                    Post-Training (Static)
+                </button>
+            </div>
+
+            <!-- Dynamic Stretches Grid -->
+            <div id="dynamic-stretches" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-slate-800 border border-slate-700/60 p-6 rounded-2xl">
+                    <div class="text-blue-400 text-2xl font-bold mb-2">01</div>
+                    <h4 class="font-heading font-bold text-lg mb-2">Leg Swings (Front & Lateral)</h4>
+                    <p class="text-slate-400 text-sm mb-3">Swing leg smoothly forward and backward, then side-to-side to open hamstrings and hip adductors.</p>
+                    <span class="text-xs font-medium text-slate-500 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">15 swings per leg</span>
+                </div>
+
+                <div class="bg-slate-800 border border-slate-700/60 p-6 rounded-2xl">
+                    <div class="text-blue-400 text-2xl font-bold mb-2">02</div>
+                    <h4 class="font-heading font-bold text-lg mb-2">Hip Circles & Torso Rotations</h4>
+                    <p class="text-slate-400 text-sm mb-3">Rotate hips in wide circles, followed by dynamic torso twists to prepare spine for spinning kicks.</p>
+                    <span class="text-xs font-medium text-slate-500 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">10 rotations each direction</span>
+                </div>
+
+                <div class="bg-slate-800 border border-slate-700/60 p-6 rounded-2xl">
+                    <div class="text-blue-400 text-2xl font-bold mb-2">03</div>
+                    <h4 class="font-heading font-bold text-lg mb-2">High Knee & Butt Kick Drills</h4>
+                    <p class="text-slate-400 text-sm mb-3">Light jogging raising knees to chest level, then kicking heels to glutes to raise body temperature.</p>
+                    <span class="text-xs font-medium text-slate-500 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">30 seconds continuous</span>
+                </div>
+            </div>
+
+            <!-- Static Stretches Grid (Hidden by default) -->
+            <div id="static-stretches" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 hidden">
+                <div class="bg-slate-800 border border-slate-700/60 p-6 rounded-2xl">
+                    <div class="text-red-400 text-2xl font-bold mb-2">01</div>
+                    <h4 class="font-heading font-bold text-lg mb-2">Butterfly Stretch</h4>
+                    <p class="text-slate-400 text-sm mb-3">Sit with soles of feet together, gently press knees down toward the floor to target inner thighs/groin.</p>
+                    <span class="text-xs font-medium text-slate-500 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">Hold 45-60 seconds</span>
+                </div>
+
+                <div class="bg-slate-800 border border-slate-700/60 p-6 rounded-2xl">
+                    <div class="text-red-400 text-2xl font-bold mb-2">02</div>
+                    <h4 class="font-heading font-bold text-lg mb-2">Seated Straddle Split</h4>
+                    <p class="text-slate-400 text-sm mb-3">Spread legs wide in V-position, lean forward from hips maintaining straight spine for kicking height.</p>
+                    <span class="text-xs font-medium text-slate-500 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">Hold 60 seconds</span>
+                </div>
+
+                <div class="bg-slate-800 border border-slate-700/60 p-6 rounded-2xl">
+                    <div class="text-red-400 text-2xl font-bold mb-2">03</div>
+                    <h4 class="font-heading font-bold text-lg mb-2">Runner's Lunge Hip Flexor Stretch</h4>
+                    <p class="text-slate-400 text-sm mb-3">Lunge forward with back knee on floor, push hips down and forward to release tight hip flexors.</p>
+                    <span class="text-xs font-medium text-slate-500 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">Hold 30s per side</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recovery Protocols -->
+    <section id="recovery" class="py-20 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-red-500 mb-2">Rest & Regeneration</h2>
+                <h3 class="font-heading text-3xl sm:text-4xl font-extrabold">Post-Training & Competition Recovery</h3>
+                <p class="text-slate-400 text-sm mt-2">Optimal recovery routines ensure long-term performance and injury prevention.</p>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-red-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center">
+                    <div class="w-16 h-16 rounded-full bg-blue-500/10 text-blue-400 mx-auto flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-bottle-water"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-lg mb-2">1. Rehydration & Electrolytes</h4>
+                    <p class="text-slate-400 text-sm">Replenish fluids immediately after intense sessions. Drink water mixed with electrolytes to prevent muscle cramps.</p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center">
+                    <div class="w-16 h-16 rounded-full bg-green-500/10 text-green-400 mx-auto flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-lg mb-2">2. Protein & Carbohydrate Intake</h4>
+                    <p class="text-slate-400 text-sm">Consume a balance of protein (muscle repair) and carbs (glycogen store restoration) within 45 minutes after training.</p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center">
+                    <div class="w-16 h-16 rounded-full bg-purple-500/10 text-purple-400 mx-auto flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-moon"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-lg mb-2">3. Sleep Quality (8-9 Hours)</h4>
+                    <p class="text-slate-400 text-sm">Sleep is when deep muscle tissue repair occurs. Crucial for teenagers balancing academics and martial arts.</p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center">
+                    <div class="w-16 h-16 rounded-full bg-red-500/10 text-red-400 mx-auto flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-ice-cream"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-lg mb-2">4. Cryotherapy / Cold Compress</h4>
+                    <p class="text-slate-400 text-sm">Apply ice packs to bruised or inflamed joints after hard sparring sessions to reduce swelling and speed recovery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-500 text-xs sm:text-sm">
+            <p class="mb-2">Created by a passionate Taekwondo exponent who started at age 9 and continues the martial arts journey at 16.</p>
+            <p>&copy; 2026 Taekwondo Mastery Guide. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Data for Belt Levels
+        const beltData = [
+            {
+                name: "10th - 9th Geup: White Belt",
+                symbolism: "Purity & Innocence",
+                description: "Represents the beginner who has no prior knowledge of Taekwondo. The white belt is a blank slate waiting to be written upon.",
+                forms: "Taegeuk Il Jang (1st Form)",
+                kicks: "Front Snap Kick (Ap Chagi), Roundhouse Kick (Dollyo Chagi)",
+                badgeBg: "bg-slate-200 text-slate-900"
+            },
+            {
+                name: "8th - 7th Geup: Yellow Belt",
+                symbolism: "The Earth & Sun",
+                description: "Represents the earth from which a plant takes root as the foundations of Taekwondo are laid.",
+                forms: "Taegeuk Ee Jang & Sam Jang",
+                kicks: "Side Kick (Yop Chagi), Ax Kick (Naeryeo Chagi)",
+                badgeBg: "bg-yellow-400 text-slate-900"
+            },
+            {
+                name: "6th - 5th Geup: Green Belt",
+                symbolism: "Growth & Blossoming",
+                description: "Represents the green plant starting to grow as the practitioner's skill begins to develop rapidly.",
+                forms: "Taegeuk Sa Jang & Oh Jang",
+                kicks: "Back Kick (Dwit Chagi), Spinning Hook Kick (Mondollyo Chagi)",
+                badgeBg: "bg-green-500 text-white"
+            },
+            {
+                name: "4th - 3rd Geup: Blue Belt",
+                symbolism: "The Sky & Heaven",
+                description: "Represents the sky toward which the plant matures into a towering tree as training progresses.",
+                forms: "Taegeuk Yook Jang & Chil Jang",
+                kicks: "Jumping Roundhouse, Push Kick (Miro Chagi)",
+                badgeBg: "bg-blue-500 text-white"
+            },
+            {
+                name: "2nd - 1st Geup: Red Belt",
+                symbolism: "Danger & Caution",
+                description: "Signifies danger, cautioning the student to exercise self-control and warning opponents of proficiency.",
+                forms: "Taegeuk Pal Jang",
+                kicks: "Tornado Kick (Narae Chagi), 360 Spinning Hook Kick",
+                badgeBg: "bg-red-600 text-white"
+            },
+            {
+                name: "1st Dan & Above: Black Belt",
+                symbolism: "Maturity & Mastery",
+                description: "Opposite of white, signifying maturity and proficiency in Taekwondo. Also indicates the wearer's imperviousness to darkness and fear.",
+                forms: "Koryo, Keumgang, Taebaek, etc.",
+                kicks: "Mastery of all fundamental and advanced jump/spinning combinations",
+                badgeBg: "bg-slate-950 text-white border border-slate-700"
+            }
+        ];
+
+        // Function to handle belt tab changes
+        function selectBelt(index) {
+            const tabs = document.querySelectorAll('.belt-btn');
+            tabs.forEach((tab, i) => {
+                if (i === index) {
+                    tab.classList.add('border-slate-200');
+                    tab.classList.remove('border-transparent');
+                } else {
+                    tab.classList.remove('border-slate-200');
+                    tab.classList.add('border-transparent');
+                }
+            });
+
+            const belt = beltData[index];
+            const card = document.getElementById('belt-details-card');
+            card.innerHTML = `
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+                    <div>
+                        <span class="text-xs uppercase font-bold tracking-wider text-slate-400">Belt Rank Details</span>
+                        <h4 class="font-heading text-2xl font-extrabold text-white">${belt.name}</h4>
+                    </div>
+                    <span class="px-4 py-1.5 rounded-full font-bold text-xs ${belt.badgeBg}">
+                        Symbolism: ${belt.symbolism}
+                    </span>
+                </div>
+                <p class="text-slate-300 text-sm leading-relaxed mb-6">${belt.description}</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm border-t border-slate-700/60 pt-4">
+                    <div>
+                        <span class="text-xs text-slate-400 font-semibold uppercase block">Poomsae (Forms) Focus:</span>
+                        <p class="text-slate-200 font-medium">${belt.forms}</p>
+                    </div>
+                    <div>
+                        <span class="text-xs text-slate-400 font-semibold uppercase block">Key Kicks Required:</span>
+                        <p class="text-slate-200 font-medium">${belt.kicks}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Switch between dynamic and static stretches
+        function switchStretchMode(mode) {
+            const dynamicBtn = document.getElementById('btn-dynamic');
+            const staticBtn = document.getElementById('btn-static');
+            const dynamicGrid = document.getElementById('dynamic-stretches');
+            const staticGrid = document.getElementById('static-stretches');
+
+            if (mode === 'dynamic') {
+                dynamicBtn.className = "px-6 py-2.5 rounded-full font-bold text-sm bg-blue-600 text-white shadow-lg transition-all";
+                staticBtn.className = "px-6 py-2.5 rounded-full font-bold text-sm bg-slate-800 text-slate-400 hover:bg-slate-700 transition-all";
+                dynamicGrid.classList.remove('hidden');
+                staticGrid.classList.add('hidden');
+            } else {
+                staticBtn.className = "px-6 py-2.5 rounded-full font-bold text-sm bg-red-600 text-white shadow-lg transition-all";
+                dynamicBtn.className = "px-6 py-2.5 rounded-full font-bold text-sm bg-slate-800 text-slate-400 hover:bg-slate-700 transition-all";
+                staticGrid.classList.remove('hidden');
+                dynamicGrid.classList.add('hidden');
+            }
+        }
+
+        // Generate custom competition goals
+        function generateGoals(event) {
+            event.preventDefault();
+            const eventType = document.getElementById('event-type').value;
+            const focusArea = document.getElementById('focus-area').value;
+            const resultBox = document.getElementById('goal-result');
+
+            let goals = [];
+
+            if (eventType === 'kyorugi') {
+                if (focusArea === 'attack') {
+                    goals = [
+                        "Initiate attack using fast lead-leg cut kicks to test opponent reactions.",
+                        "Score at least 2 clean body/head kicks off offensive combinations.",
+                        "Maintain aggressive forward pressure without falling into counter traps."
+                    ];
+                } else if (focusArea === 'defense') {
+                    goals = [
+                        "Keep a tight closed guard to block chest protector body shots.",
+                        "Execute back-step counter spinning hook or back kick when opponent rushes.",
+                        "Bait opponent's attack to open up clean counter-scoring opportunities."
+                    ];
+                } else {
+                    goals = [
+                        "Maintain steady breathing and high footwork rhythm across all 3 rounds.",
+                        "Avoid stalling penalties (Gam-jeom) by keeping active ring movement.",
+                        "Explode in the final 30 seconds of each round to secure points."
+                    ];
+                }
+            } else {
+                goals = [
+                    "Maintain maximum extension and locking in stances (Ap-kubi / Dwit-kubi).",
+                    "Deliver sharp trajectory, clean snap, and equilibrium on high side kicks.",
+                    "Demonstrate sharp power generation and breath control at technique execution."
+                ];
+            }
+
+            resultBox.innerHTML = `
+                <h5 class="font-bold text-slate-100 mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-check-double text-green-400"></i> Targeted Competition Objectives:
+                </h5>
+                <ul class="list-disc list-inside space-y-1.5 text-xs text-slate-300">
+                    ${goals.map(g => `<li>${g}</li>`).join('')}
+                </ul>
+            `;
+            resultBox.classList.remove('hidden');
+        }
+
+        // Initialize default view
+        window.onload = function() {
+            selectBelt(0);
+
+            // Mobile menu toggle logic
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        };
+    </script>
+</body>
+</html>
